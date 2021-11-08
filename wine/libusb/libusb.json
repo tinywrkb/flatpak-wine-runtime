@@ -1,0 +1,9 @@
+{
+    "name": "libusb",
+    "config-opts": [
+        "--disable-static"
+    ],
+    "sources": [
+        "sources.json"
+    ]
+}

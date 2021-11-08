@@ -1,0 +1,17 @@
+{
+    "name": "libsane",
+    "sources": [
+        "sources.json"
+    ],
+    "modules": [
+        "../libgphoto2/libgphoto2.json"
+    ],
+    "cleanup": [
+        "/bin",
+        "/etc",
+        "/sbin",
+        "/share/doc",
+        "/share/man",
+        "/share/sane"
+    ]
+}

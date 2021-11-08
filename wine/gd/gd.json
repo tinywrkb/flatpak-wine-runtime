@@ -1,0 +1,9 @@
+{
+    "name": "gd",
+    "sources": [
+        "sources.json"
+    ],
+    "cleanup": [
+        "/bin"
+    ]
+}

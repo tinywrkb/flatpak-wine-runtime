@@ -1,0 +1,9 @@
+{
+    "name": "popt",
+    "sources": [
+        "sources.json"
+    ],
+    "cleanup": [
+        "/share/man"
+    ]
+}

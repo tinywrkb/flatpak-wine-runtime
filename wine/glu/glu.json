@@ -1,0 +1,15 @@
+{
+    "name": "glu",
+    "config-opts": [
+        "--disable-static"
+    ],
+    "sources": [
+        "sources.json"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "*.a",
+        "*.la"
+    ]
+}
