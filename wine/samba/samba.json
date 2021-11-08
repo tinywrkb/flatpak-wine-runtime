@@ -31,11 +31,11 @@
         "/share/samba"
     ],
     "modules": [
-        "cups/libcups.json",
-        "jansson/jansson.json",
-        "krb5/krb5.json",
-        "ldb/ldb.json",
-        "rpcsvc-proto/rpcsvc-proto.json",
+        "../cups/libcups.json",
+        "../jansson/jansson.json",
+        "../krb5/krb5.json",
+        "../ldb/ldb.json",
+        "../rpcsvc-proto/rpcsvc-proto.json",
         "perl-dependencies.json"
     ]
 }
