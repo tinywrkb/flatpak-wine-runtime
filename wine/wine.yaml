@@ -39,7 +39,7 @@ modules:
         branch: wayland
         commit: 379089df79ab4405b442f8fbfc424e4d24a0b10c
       - type: file
-        path: wine-configure-wrapper
+        path: configure-wrapper
         dest-filename: configure-wrapper
       - type: shell
         commands:
