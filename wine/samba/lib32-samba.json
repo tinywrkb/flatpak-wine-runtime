@@ -50,8 +50,6 @@
         "../cups/lib32-libcups.json",
         "../jansson/lib32-jansson.json",
         "../krb5/lib32-krb5.json",
-        "../ldb/lib32-ldb.json",
-        "../rpcsvc-proto/rpcsvc-proto.json",
-        "perl-dependencies.json"
+        "../ldb/lib32-ldb.json"
     ]
 }

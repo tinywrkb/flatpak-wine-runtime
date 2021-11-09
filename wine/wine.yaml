@@ -17,6 +17,9 @@ build-commands:
   - make -C wine64 install
 modules:
   - opencl-headers/opencl-headers.json
+  # samba depends: perl-parse-yapp, rpcsvc-proto
+  - perl-parse-yapp/perl-parse-yapp.json
+  - rpcsvc-proto/rpcsvc-proto.json
   - name: wine64
     no-make-install: true
     config-opts:

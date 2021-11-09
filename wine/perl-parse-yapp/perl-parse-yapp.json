@@ -1,5 +1,5 @@
 {
-    "name": "lib32-perl-dependencies",
+    "name": "perl-dependencies",
     "buildsystem": "simple",
     "build-commands": [
         "perl-libs/install.sh"
