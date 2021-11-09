@@ -1,5 +1,5 @@
 {
-    "name": "perl-dependencies",
+    "name": "perl-parse-yapp",
     "buildsystem": "simple",
     "build-commands": [
         "perl-libs/install.sh"
