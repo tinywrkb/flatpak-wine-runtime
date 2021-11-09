@@ -106,6 +106,7 @@ cleanup-platform:
 cleanup-platform-commands:
   - /usr/libexec/freedesktop-post.sh
 prepare-platform-commands:
+  # /app symlink conflicts with the pulled-in i386 libdir
   - rm /usr/lib/i386-linux-gnu
 modules:
   - name: runtime-prepare
