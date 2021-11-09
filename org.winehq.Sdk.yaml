@@ -130,6 +130,48 @@ modules:
         /app/lib/i386-linux-gnu
         /usr/lib/i386-linux-gnu
         EOF
+  - name: install-i386-toolchain
+    buildsystem: simple
+    build-commands:
+      - install -dm755 /usr/{lib/x86_64-linux-gnu/gcc,libexec/gcc}
+      - |
+        cd /usr/lib/sdk/toolchain-i386
+
+        mv bin/i686-unknown-linux-gnu-* /usr/bin/ && rmdir bin
+        mv i686-unknown-linux-gnu /usr/
+
+        pushd lib/x86_64-linux-gnu
+        mv gcc/i686-unknown-linux-gnu /usr/lib/x86_64-linux-gnu/gcc/ && rmdir gcc
+        popd
+
+        mv libexec/gcc/i686-unknown-linux-gnu /usr/libexec/gcc/ && rmdir libexec/{gcc,}
+        mv share/man/man1/i686-unknown-linux-gnu-* /usr/share/man/man1/ && rmdir share/man/man1
+        mv x86_64-unknown-linux-gnu/i686-unknown-linux-gnu /usr/x86_64-unknown-linux-gnu && rmdir x86_64-unknown-linux-gnu
+    post-install:
+      - |
+        cd /usr/lib/sdk
+        pushd toolchain-i386
+
+        rm include/ctf*.h && rmdir include
+
+        pushd lib/x86_64-linux-gnu
+        rm bfd-plugins/libdep.* && rmdir bfd-plugins
+        rm x86_64-linux-gnu/libcc1.* && rmdir x86_64-linux-gnu
+        rm libctf*
+        popd
+        rmdir lib/{x86_64-linux-gnu,}
+
+        pushd share
+        rm -rf gcc-*/python/libstdcxx && rmdir gcc-*/{python,}
+        rm -rf {info,man/man7} && rmdir man
+        popd
+        rmdir share
+
+        rm .ref
+        popd
+        rmdir toolchain-i386
+    cleanup-platform:
+      - '*'
   - wine/wine.yaml
   # 7z can extract some self-extracted *.exe installers
   - p7zip/p7zip.json
