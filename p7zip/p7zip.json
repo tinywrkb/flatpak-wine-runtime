@@ -9,7 +9,8 @@
     "make-install-args": [
         "DEST_DIR=/",
         "DEST_HOME=${FLATPAK_DEST}",
-        "DEST_MAN=${FLATPAK_DEST}/share/man"
+        "DEST_MAN=${FLATPAK_DEST}/share/man",
+        "DEST_SHARE=${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/p7zip"
     ],
     "sources": [
         {
