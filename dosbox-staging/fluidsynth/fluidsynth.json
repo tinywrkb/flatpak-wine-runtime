@@ -2,6 +2,7 @@
     "name": "fluidsynth",
     "buildsystem": "cmake",
     "config-opts": [
+        "-DLIB_INSTALL_DIR='lib/x86_64-linux-gnu'",
         "-DLIB_SUFFIX=''"
     ],
     "sources": [
