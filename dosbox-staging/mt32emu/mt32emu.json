@@ -2,8 +2,9 @@
     "name": "mt32emu",
     "buildsystem": "cmake",
     "config-opts": [
-        "-Dmunt_WITH_MT32EMU_SMF2WAV=FALSE",
-        "-Dmunt_WITH_MT32EMU_QT=FALSE"
+        "-DLIB_INSTALL_DIR=/usr/lib/x86_64-linux-gnu",
+        "-Dmunt_WITH_MT32EMU_QT=FALSE",
+        "-Dmunt_WITH_MT32EMU_SMF2WAV=FALSE"
     ],
     "sources": [
         {
