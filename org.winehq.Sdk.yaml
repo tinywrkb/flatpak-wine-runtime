@@ -6,11 +6,13 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-# - org.freedesktop.Sdk.Debug
-  - org.freedesktop.Sdk.Locale
-  - org.freedesktop.Sdk.Docs
   - org.freedesktop.Sdk.Compat.i386
+  # will likely need need a proper add extension entry
+  #- org.freedesktop.Sdk.Compat.i386.Debug
+  - org.freedesktop.Sdk.Debug
+  - org.freedesktop.Sdk.Docs
   - org.freedesktop.Sdk.Extension.toolchain-i386
+  - org.freedesktop.Sdk.Locale
 platform-extensions:
   - org.freedesktop.Platform.Locale
 inherit-extensions:
@@ -30,7 +32,7 @@ add-extensions:
     bundle: true
     autodelete: true
     no-autodownload: true
-# org.freedesktop.Platform.Compat.i386.Debug:
+# org.winehq.Platform.Compat.i386.Debug:
 #   directory: lib/debug/lib/i386-linux-gnu
 #   version: '21.08'
 #   no-autodownload: true
