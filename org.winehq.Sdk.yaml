@@ -90,7 +90,6 @@ cleanup:
   - '*.la'
 cleanup-commands:
   - /usr/libexec/freedesktop-post.sh
-  - mkdir -p /usr/lib/debug/usr/lib/i386-linux-gnu
 cleanup-platform:
   - /include
   - /lib/*/cmake
