@@ -91,7 +91,6 @@ cleanup:
 cleanup-commands:
   - /usr/libexec/freedesktop-post.sh
   - mkdir -p /usr/lib/debug/usr/lib/i386-linux-gnu
-  - rm -rf /usr/sdk/toolchain-i386
 cleanup-platform:
   - /include
   - /lib/*/cmake
