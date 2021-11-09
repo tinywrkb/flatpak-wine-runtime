@@ -13,7 +13,6 @@
     ],
     "cleanup": [
         "/bin",
-        "/share/et",
         "/share/examples",
         "/share/man"
     ],

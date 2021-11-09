@@ -28,7 +28,6 @@
     ],
     "cleanup": [
         "/bin32",
-        "/share/et",
         "/share/examples",
         "/share/man"
     ],
