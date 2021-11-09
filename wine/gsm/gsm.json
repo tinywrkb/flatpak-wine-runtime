@@ -5,13 +5,14 @@
         "-j1",
         "INSTALL_ROOT=${FLATPAK_DEST}",
         "GSM_INSTALL_INC=${FLATPAK_DEST}/include",
-        "GSM_INSTALL_LIB=${FLATPAK_DEST}/lib/x86_64-linux-gnu"
+        "GSM_INSTALL_LIB=${FLATPAK_DEST}/lib/x86_64-linux-gnu",
+        "GSM_INSTALL_MAN=${FLATPAK_DEST}/share/man/man3"
     ],
     "sources": [
         "sources.json"
     ],
     "cleanup": [
         "/bin",
-        "/man"
+        "/share/man"
     ]
 }
