@@ -105,7 +105,29 @@ cleanup-platform:
   - '*.prl'
 cleanup-platform-commands:
   - /usr/libexec/freedesktop-post.sh
+prepare-platform-commands:
+  - rm /usr/lib/i386-linux-gnu
 modules:
+  - name: runtime-prepare
+    buildsystem: simple
+    build-commands:
+      # workaround for including 32bit libs in the platform
+      - |
+        mv /usr/lib/i386-linux-gnu{,-1}
+        ln -sr /usr/lib/i386-linux-gnu{-1,}
+      # mount default 32bit extensions directly onto the runtime
+      - |
+        rm ${FLATPAK_DEST}/lib/i386-linux-gnu/GL
+        install -dm755 ${FLATPAK_DEST}/lib/i386-linux-gnu/{GL,dri/intel-vaapi-driver}
+      # ffmpeg can be used with wine-staging
+      #- install -dm755 ${FLATPAK_DEST}/lib/{x86_64,i386}-linux-gnu/ffmpeg
+      # add default 32bit locations to ld.so.conf (empty by default)
+      - |
+        install -Dm644 /dev/stdin ${FLATPAK_DEST}/etc/ld.so.conf <<EOF
+        /app/lib32
+        /app/lib/i386-linux-gnu
+        /usr/lib/i386-linux-gnu
+        EOF
   - wine/wine.yaml
   # 7z can extract some self-extracted *.exe installers
   - p7zip/p7zip.json
