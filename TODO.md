@@ -14,3 +14,5 @@
 * auto-create a default wine prefix and symlink wine libs
 * drop cups module in favour of the runtime supplied one
 * wine development environment scripts
+* add dxvk-ags & dxvk-nvapi
+* add vkd3d-proton?
