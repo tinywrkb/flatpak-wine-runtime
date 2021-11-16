@@ -9,8 +9,7 @@
         "sources.json"
     ],
     "cleanup": [
-        "/bin",
-        "/share/man"
+        "/bin"
     ],
     "modules": [
         "../libnl/libnl.json"

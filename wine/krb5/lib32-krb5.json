@@ -28,8 +28,7 @@
     ],
     "cleanup": [
         "/bin32",
-        "/share/examples",
-        "/share/man"
+        "/share/examples"
     ],
     "modules": [
         "../openldap/lib32-openldap.json"

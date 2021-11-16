@@ -12,8 +12,7 @@
         "sources.json"
     ],
     "cleanup": [
-        "/bin",
-        "/share/man"
+        "/bin"
     ],
     "modules": [
         "../popt/popt.json",

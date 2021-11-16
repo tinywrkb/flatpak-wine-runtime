@@ -43,7 +43,6 @@
     "cleanup": [
         "/bin32",
         "/etc",
-        "/share/man",
         "/share/samba"
     ],
     "modules": [

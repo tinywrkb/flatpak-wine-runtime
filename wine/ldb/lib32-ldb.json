@@ -26,8 +26,7 @@
         "sources.json"
     ],
     "cleanup": [
-        "/bin",
-        "/share/man"
+        "/bin"
     ],
     "modules": [
         "../popt/lib32-popt.json",

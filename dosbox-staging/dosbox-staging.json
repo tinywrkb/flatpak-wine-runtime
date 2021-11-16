@@ -28,7 +28,6 @@
         }
     ],
     "cleanup": [
-        "/share/doc",
         "/share/licenses"
     ],
     "modules": [

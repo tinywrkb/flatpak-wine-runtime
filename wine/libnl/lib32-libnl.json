@@ -22,7 +22,6 @@
         "sources.json"
     ],
     "cleanup": [
-        "/etc",
-        "/share/man"
+        "/etc"
     ]
 }

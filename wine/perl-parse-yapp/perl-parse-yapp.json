@@ -10,7 +10,7 @@
     "sources": [
         "perl-dependencies-sources.json"
     ],
-    "cleanup": [
+    "cleanup-platform": [
         "*"
     ]
 }

@@ -27,7 +27,6 @@
     ],
     "cleanup": [
         "/bin",
-        "/etc",
-        "/share/man"
+        "/etc"
     ]
 }

@@ -13,8 +13,7 @@
     ],
     "cleanup": [
         "/bin",
-        "/share/examples",
-        "/share/man"
+        "/share/examples"
     ],
     "modules": [
         "../openldap/openldap.json"

@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "cleanup": [
+    "cleanup-platform": [
         "*"
     ]
 }

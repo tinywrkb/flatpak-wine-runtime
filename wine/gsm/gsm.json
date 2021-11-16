@@ -12,7 +12,6 @@
         "sources.json"
     ],
     "cleanup": [
-        "/bin",
-        "/share/man"
+        "/bin"
     ]
 }

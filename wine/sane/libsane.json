@@ -10,8 +10,6 @@
         "/bin",
         "/etc",
         "/sbin",
-        "/share/doc",
-        "/share/man",
         "/share/sane"
     ]
 }

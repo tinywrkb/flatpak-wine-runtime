@@ -19,11 +19,5 @@
     ],
     "sources": [
         "sources.json"
-    ],
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "*.a",
-        "*.la"
     ]
 }

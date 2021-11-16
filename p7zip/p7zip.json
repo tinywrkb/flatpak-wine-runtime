@@ -27,9 +27,5 @@
                 "url-template": "https://github.com/jinfeihan57/p7zip/archive/v$version/p7zip-$version.tar.gz"
             }
         }
-    ],
-    "cleanup": [
-        "/share/doc",
-        "/share/man"
     ]
 }

@@ -27,7 +27,6 @@
     ],
     "cleanup": [
         "/etc",
-        "/share/man",
         "/share/samba"
     ],
     "modules": [

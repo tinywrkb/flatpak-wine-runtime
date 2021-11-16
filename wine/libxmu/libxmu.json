@@ -2,8 +2,5 @@
     "name": "libxmu",
     "sources": [
         "sources.json"
-    ],
-    "cleanup": [
-        "/share/doc"
     ]
 }
