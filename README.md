@@ -24,7 +24,6 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 ## TODO
 
 ### packaging
-* [ ] **(WIP)** add [vinebooth](https://github.com/tinywrkb/vinebooth): Wine Flatpak bootstrap
 * [ ] mt32emu f-e-d-c
 * [ ] wine-gecko f-e-d-c or fix the check in the anitya project page
 * [ ] set no-debuginfo and strip to avoid flatpak-builder constantly attempting to compress wine libs
@@ -48,6 +47,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] add [corefonts](http://corefonts.sourceforge.net/), [see](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web), and [gentoo's packaging](https://packages.gentoo.org/packages/media-fonts/corefonts)
 * [ ] tahoma: compare glyph coverage of wine's vs original
 * [ ] investigate font related errors, specifically Noto Fonts related
+* [ ] more fonts?
 
 ### libs and tools to evaluate and add
 * [ ] dxvk-ags
@@ -64,3 +64,28 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * [ ] using different toolchains
     * [ ] mingw
     * [ ] msvc
+
+## Wishlist
+
+* [ ] [vinebooth](https://github.com/tinywrkb/vinebooth): Wine Flatpak bootstrap. **Status: WIP**
+* [ ] fur: Flatpak User Repository
+  * Objective: Solve the source fetch problem
+  * Problem: It's not unusual that downloading a Windows app requires the user to authenticate,
+    subscribe, or use a temporary download URL, and make it impossible to fetch an installer
+    with Flatpak.  
+    Even when a download URL is available, there's no releases archive. This means that when a new
+    version is released, the download URL won't work or the installer will change (size, checksum),
+    and this will end with a time window where the Flatpak is broken until an update is propagate
+    down to the user.
+    This issue makes these apps less fitting for Flathub publishing.
+  * Solution: Build the app locally, and let the user select the installer. And in detail:
+    * Automate fetching Flatpak packaging manifests
+    * Build apps into a local Flatpak repository using the cache of downloaded packaging manifests
+    * Before building an app, let the user select a local file matching the extra-data source entry
+      or be used to update it, will be copied into `FLATPAK_INSTALLATION_DIR/extra-data/CHECKSUM/filename`.
+  * Other features:
+    * A real user repository, meaning supporting multiple repositories, not built around a single
+      repository.
+    * Support Git repo per app, and `flatpaks` repo, a Git with multiple apps.
+    * Instead of the extra-data cache, start a local HTTP server and make the file available to
+      the local machine.
