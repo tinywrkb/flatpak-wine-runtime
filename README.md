@@ -6,12 +6,32 @@ apps as Flatpaks.
 The idea of running Wine apps in the Flatpak sandbox is not new, but previous examples were creating
 the Wine prefix outside of the local Flatpak repositry, and at best, packaging the installer.  
 
-This runtime offer the possibility of adding a Wine prefix to the local Flatpak (system/user).  
+This runtime offers the possibility of adding a Wine prefix to the local Flatpak installation
+(system/user).  
 This is done by deploying a Wine prefix during the apply extra step, and running the installer
 executable during this step to installing the Wine app into the prefix.  
 Packaging the Wine app this way gives us an app that is fully managed by Flatpak.  
 Thus this approach can be called Flatpak-managed Wine packaging.
 
+### Pros
+
+* Wine apps are fully managed by Flatpak.
+* No need to run an installer after the Flatpak was installed.
+* The prefix is recreated on every update so no need to script an update helper.
+* Removing an app removes the prefix with the Wine app installation.
+* Removing the app's `.var` folder just reset to a clean state, but doesn't affect the prefix.
+* The installation is shared between users, saving storage space.
+* Packaging defines a specific, optionally stable, runtime version, and the prefix is recreated
+  when the packaging is update, so broken symlinks is not an issue, and storage space can be saved
+  by using symlinks in the prefix.
+
+### Cons
+
+* Need to be able to identify post-installation registry changes, export them, and re-apply after
+  an update of the Flatpak app or rollback.
+* Questionalbe Windows app packaging practices make it close to impossible to run the app from
+  a read-only path.  
+  Specifically, self-updated Windows apps that are installed into AppData are a PITA deal with.
 
 ## Packaging examples
 
