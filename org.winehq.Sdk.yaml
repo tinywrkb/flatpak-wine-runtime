@@ -76,7 +76,6 @@ finish-args:
   - --persist=.wine
   - --share=ipc
   - --socket=pulseaudio
-  - --socket=wayland
   - --socket=x11
   - --runtime=org.winehq.Platform//master
   - --sdk=org.winehq.Sdk//master
