@@ -9,7 +9,7 @@ the Wine prefix outside of the local Flatpak repositry, and at best, packaging t
 This runtime offers the possibility of adding a Wine prefix to the local Flatpak installation
 (system/user).  
 This is done by deploying a Wine prefix during the apply extra step, and running the installer
-executable during this step to installing the Wine app into the prefix.  
+executable during this step to install the Wine app into the prefix.  
 Packaging the Wine app this way gives us an app that is fully managed by Flatpak.  
 Thus this approach can be called Flatpak-managed Wine packaging.
 
@@ -73,7 +73,10 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] dxvk-ags
 * [ ] dxvk-nvapi
 * [ ] vkd3d-proton
-* [ ] WineASIO
+* [ ] WineASIO, apps to test with:
+  * [ ] [Ableton Live](https://www.ableton.com/en/trial/)
+  * [ ] [FL Studio](https://www.image-line.com/fl-studio-download/)
+  * [ ] [Amplitube](https://www.ikmultimedia.com/products/amplitube4/)
 
 ### sdk environment
 * [ ] helper scripts to build wine
