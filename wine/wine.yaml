@@ -17,18 +17,14 @@ modules:
       - mkdir -p ${FLATPAK_DEST}/src
       - cp -r $FLATPAK_BUILDER_BUILDDIR ${FLATPAK_DEST}/src/wine64
     sources: &wine_sources
-      #- type: archive
-      #  url: https://dl.winehq.org/wine/source/6.x/wine-6.3.tar.xz
-      #  sha256: 682a77c1fd12f56347ca2080d85fe17def1b655d3241d94582f87591d9d0cc3b
-      #  x-checker-data:
-      #    type: anitya
-      #    project-id: 5134
-      #    stable-only: true
-      #    url-template: https://dl.winehq.org/wine/source/$version0.x/wine-$version.tar.xz
-      - type: git
-        url: https://gitlab.collabora.com/alf/wine.git
-        branch: wayland
-        commit: 379089df79ab4405b442f8fbfc424e4d24a0b10c
+      - type: archive
+        url: https://dl.winehq.org/wine/source/6.x/wine-6.22.tar.xz
+        sha256: 826042a181a9879732a3dacbbf8167605f305291bfcfaaf5eaa0ec9525d764ef
+        x-checker-data:
+          type: anitya
+          project-id: 5134
+          stable-only: true
+          url-template: https://dl.winehq.org/wine/source/$version0.x/wine-$version.tar.xz
       - type: file
         path: configure-wrapper
         dest-filename: configure-wrapper

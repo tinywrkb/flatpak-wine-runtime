@@ -3,7 +3,6 @@
 config_options=(
   # display server
   --with-x
-  --with-wayland
 
   # auto-config features, explicitly enabled to fail configure on dependency miss
   # packaged libs dependent features
