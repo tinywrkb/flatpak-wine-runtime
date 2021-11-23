@@ -32,6 +32,8 @@ modules:
         commands:
           # workaround for failure of configure script to detect lib32-libpcap
           - sed -i '/^if test .*ac_cv_lib_pcap_pcap_create.*!= xyes/, /^fi$/d' configure
+          # workaround for failure of configure script to detect openldap
+          - sed 's/-lldap_r/-lldap/' -i configure
           # common configure options
           - |
             mv configure{,.wine}
