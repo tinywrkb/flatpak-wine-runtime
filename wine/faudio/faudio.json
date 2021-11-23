@@ -4,8 +4,7 @@
     "buildsystem": "cmake-ninja",
     "config-opts": [
         "-DCMAKE_BUILD_TYPE=Release",
-        "-DCMAKE_INSTALL_LIBDIR=lib/x86_64-linux-gnu",
-        "-DGSTREAMER=ON"
+        "-DCMAKE_INSTALL_LIBDIR=lib/x86_64-linux-gnu"
     ],
     "sources": [
         "sources.json"
