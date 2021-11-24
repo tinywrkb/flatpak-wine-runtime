@@ -75,8 +75,19 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] vkd3d-proton
 * [x] WineASIO, apps to test with:
   * [ ] [Ableton Live](https://www.ableton.com/en/trial/)
-  * [ ] [FL Studio](https://www.image-line.com/fl-studio-download/)
   * [ ] [Amplitube](https://www.ikmultimedia.com/products/amplitube4/)
+  * [ ] [Audacity](https://www.audacityteam.org/)
+  * [ ] [FL Studio](https://www.image-line.com/fl-studio-download/)
+  * [ ] [FoxTunes](https://github.com/Raimusoft/FoxTunes)
+  * [ ] [MStarPlayer](https://github.com/ServiusHack/MStarPlayer)
+  * [ ] [Melissa](https://github.com/mosynthkey/Melissa)
+  * [ ] [Polyphone](https://www.polyphone-soundfonts.com/)
+  * [ ] [SonoBus](https://www.sonobus.net/)
+  * [ ] [Tenacity](https://tenacityaudio.org/)
+  * [ ] [Vital](https://github.com/mtytel/vital) or [tank-trax's fork](https://github.com/tank-trax/vital/tree/vitality+minus-1.0.6-win)
+  * [ ] [Winamp ASIO plugin](https://sourceforge.net/projects/winamp-asio-plugin/)
+  * [ ] [Winyl](https://winyl-player.github.io/)
+  * [ ] [foobar2000](https://www.foobar2000.org/)
 
 ### sdk environment
 * [ ] helper scripts to build wine
