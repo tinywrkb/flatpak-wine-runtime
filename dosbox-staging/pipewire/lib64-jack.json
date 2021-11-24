@@ -1,0 +1,17 @@
+{
+    "name": "lib64-jack",
+    "buildsystem": "simple",
+    "build-commands": [
+        "./build.sh"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "path": "build.sh"
+        },
+        {
+            "type": "file",
+            "path": "pipewire-jack-runtime.pc"
+        }
+    ]
+}
