@@ -167,18 +167,20 @@ modules:
         rmdir toolchain-i386
     cleanup-platform:
       - '*'
+  # wine & official libs & features
   - wine/wine.yaml
   - dosbox-staging/dosbox-staging.json
-  - dxvk/dxvk-bin.json
   - wine-gecko/wine-gecko.json
   - wine-mono/wine-mono.json
-  - winetricks/winetricks.json
+  # extra libs
+  - dxvk/dxvk-bin.json
   # diagnotics
   - mesa-demos/mesa-demos.json
-  # other utilities
+  # helper utils
     # extract exe installers with 7z
   - p7zip/p7zip.json
-  - name: os-release
+  - winetricks/winetricks.json
+  - name: runtime-finalize
     post-install:
       - mkdir -p /usr/share/runtime/lib/plugins/
     sources:
