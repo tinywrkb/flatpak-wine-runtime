@@ -1,5 +1,5 @@
 {
-    "name": "wine-mone",
+    "name": "wine-mono",
     "buildsystem": "simple",
     "build-commands": [
         "install -dm755 ${FLATPAK_DEST}/share/wine/mono",
