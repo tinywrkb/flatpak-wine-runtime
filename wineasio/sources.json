@@ -11,7 +11,7 @@
             "versions": {
                 ">": "1.0.0"
             },
-            "tag-template": "$version"
+            "tag-template": "v$version"
         }
     },
     {
