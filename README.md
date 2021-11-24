@@ -50,8 +50,8 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] evaluate packaging a wine prefix: machids, uuids, hw identifiers
 * [ ] drop cups module in favour of the runtime supplied one
 * [ ] switch master to the latest development release and add branches
-  * [ ] master: latest development release built on top the latest freedesktop runtime
-  * [ ] wayland (collabora)
+  * [x] master: latest development release built on top the latest freedesktop runtime
+  * [x] wayland (collabora) **outdated**
   * [ ] wayland (varmd)
   * [ ] wine6 or wine6-21.08: latest stable
   * [ ] staging
@@ -97,11 +97,12 @@ Thus this approach can be called Flatpak-managed Wine packaging.
     subscribe, or use a temporary download URL, and make it impossible to fetch an installer
     with Flatpak.  
     Even when a download URL is available, there's no releases archive. This means that when a new
-    version is released, the download URL won't work or the installer will change (size, checksum),
-    and this will end with a time window where the Flatpak is broken until an update is propagate
-    down to the user.
+    version is released, the download URL won't work and/or the installer's properties (size, checksum)
+    will be changed, so there's will be a time window where the Flatpak is broken until a packaging
+    update be propagate down to the user.  
     This issue makes these apps less fitting for Flathub publishing.
-  * Solution: Build the app locally, and let the user select the installer. And in detail:
+  * Solution: Build the Flatpak app locally, and let the user select the Windows installer before
+    installing the Flatpak.
     * Automate fetching Flatpak packaging manifests
     * Build apps into a local Flatpak repository using the cache of downloaded packaging manifests
     * Before building an app, let the user select a local file matching the extra-data source entry
@@ -109,6 +110,6 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * Other features:
     * A real user repository, meaning supporting multiple repositories, not built around a single
       repository.
-    * Support Git repo per app, and `flatpaks` repo, a Git with multiple apps.
+    * Support Git repo per app, and `flatpaks` repo, a Git repo that contains multiple apps.
     * Instead of the extra-data cache, start a local HTTP server and make the file available to
       the local machine.
