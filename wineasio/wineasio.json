@@ -1,0 +1,17 @@
+{
+    "name": "wineasio",
+    "buildsystem": "simple",
+    "build-commands": [
+        "install -Dm755 setup_wineasio.sh -t ${FLATPAK_DEST}/bin/"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "path": "setup_wineasio.sh"
+        }
+    ],
+    "modules": [
+        "lib32-wineasio.json",
+        "lib64-wineasio.json"
+    ]
+}

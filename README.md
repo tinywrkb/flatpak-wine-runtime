@@ -73,7 +73,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] dxvk-ags
 * [ ] dxvk-nvapi
 * [ ] vkd3d-proton
-* [ ] WineASIO, apps to test with:
+* [x] WineASIO, apps to test with:
   * [ ] [Ableton Live](https://www.ableton.com/en/trial/)
   * [ ] [FL Studio](https://www.image-line.com/fl-studio-download/)
   * [ ] [Amplitube](https://www.ikmultimedia.com/products/amplitube4/)

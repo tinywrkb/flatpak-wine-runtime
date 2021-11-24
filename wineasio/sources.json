@@ -1,0 +1,21 @@
+[
+    {
+        "type": "git",
+        "url": "https://github.com/wineasio/wineasio.git",
+        "branch": "master",
+        "commit": "0a97f2f9e29c133349237cdd88fec4615cc72931",
+        "x-checker-data": {
+            "type": "anitya",
+            "project-id": 239853,
+            "stable-only": true,
+            "versions": {
+                ">": "1.0.0"
+            },
+            "tag-template": "$version"
+        }
+    },
+    {
+        "type": "file",
+        "path": "build.sh"
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "name": "lib64-wineasio",
+    "buildsystem": "simple",
+    "build-commands": [
+        "./build.sh"
+    ],
+    "sources": [
+        "sources.json"
+    ]
+}
