@@ -2,18 +2,23 @@
 
 set -e
 
-if [ "$FLATPAK_ARCH" == 'x86_64' ]; then
-  _ARCH='64'
-elif [ "$FLATPAK_ARCH" == 'i386' ]; then
-  _ARCH='32'
+WINEBUILD=winebuild
+export WINECC=winegcc
+
+if [ "$CC" == 'i686-unknown-linux-gnu-gcc' ]; then
+  _ARCH='i386'
+  _ML='32'
+  WINEBUILD+=" --target i686-unknown-linux-gnu"
+  export WINECC+=" --target i686-unknown-linux-gnu"
 else
-  exit 1
+  _ARCH='x86_64'
+  _ML='64'
 fi
 
-export WINEARCH=win${_ARCH}
-wineprefix=${flatpak_builder_builddir}/wine
+export WINEARCH=win${_ML}
+wineprefix=${FLATPAK_BUILDER_BUILDDIR}/wine
 
-make ${_ARCH}
-install -Dm644 build${_ARCH}/wineasio.dll.so -t ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/wine/${FLATPAK_ARCH}-unix/
-winebuild --dll --fake-module -E wineasio.dll.spec build${_ARCH}/{asio,main,regsvr}.c.o > build${_ARCH}/wineasio.dll
-install -Dm644 build${_ARCH}/wineasio.dll -t ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/wine/${FLATPAK_ARCH}-windows/
+make ${_ML}
+install -Dm644 build${_ML}/wineasio.dll.so -t ${FLATPAK_DEST}/lib/${_ARCH}-linux-gnu/wine/${_ARCH}-unix/
+$WINEBUILD --dll --fake-module -E wineasio.dll.spec build${_ML}/{asio,main,regsvr}.c.o > build${_ML}/wineasio.dll
+install -Dm644 build${_ML}/wineasio.dll -t ${FLATPAK_DEST}/lib/${_ARCH}-linux-gnu/wine/${_ARCH}-windows/

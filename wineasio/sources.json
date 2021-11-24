@@ -15,6 +15,12 @@
         }
     },
     {
+        "type": "shell",
+        "commands": [
+            "sed -i '/^CC = gcc/d;/^WINECC = winegcc/d' Makefile.mk"
+        ]
+    },
+    {
         "type": "file",
         "path": "build.sh"
     }
