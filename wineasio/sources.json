@@ -17,7 +17,7 @@
     {
         "type": "shell",
         "commands": [
-            "sed -i '/^CC.*=/d;/^WINEBUILD.*=/d;/^WINECC.*=/d' Makefile.mk",
+            "sed -i '/^CC.*=/d' Makefile.mk",
             "sed -i 's/\\($(WINECC)\\)/\\1 $(WINECCARGS)/;s/\\($(WINEBUILD)\\)/\\1 $(WINEBUILDARGS)/' Makefile.mk"
         ]
     },

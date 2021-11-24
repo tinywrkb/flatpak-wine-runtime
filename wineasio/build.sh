@@ -2,9 +2,6 @@
 
 set -e
 
-export WINEBUILD=winebuild
-export WINECC=winegcc
-
 if [ "$CC" == 'i686-unknown-linux-gnu-gcc' ]; then
   _ARCH='i386'
   _ML='32'
