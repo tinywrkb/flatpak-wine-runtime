@@ -31,7 +31,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   an update of the Flatpak app or rollback.
 * Questionalbe Windows app packaging practices make it close to impossible to run the app from
   a read-only path.  
-  Specifically, self-updated Windows apps that are installed into AppData are a PITA deal with.
+  Specifically, self-updatable Windows apps that are installed into AppData are a PITA to deal with.
 
 ## Packaging examples
 
