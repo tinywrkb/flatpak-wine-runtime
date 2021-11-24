@@ -168,13 +168,16 @@ modules:
     cleanup-platform:
       - '*'
   - wine/wine.yaml
-  # 7z can extract some self-extracted *.exe installers
-  - p7zip/p7zip.json
   - dosbox-staging/dosbox-staging.json
   - dxvk/dxvk-bin.json
   - wine-gecko/wine-gecko.json
   - wine-mono/wine-mono.json
   - winetricks/winetricks.json
+  # diagnotics
+  - mesa-demos/mesa-demos.json
+  # other utilities
+    # extract exe installers with 7z
+  - p7zip/p7zip.json
   - name: os-release
     post-install:
       - mkdir -p /usr/share/runtime/lib/plugins/

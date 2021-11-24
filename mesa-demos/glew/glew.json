@@ -1,0 +1,34 @@
+{
+    "name": "glew",
+    "no-autogen": true,
+    "make-args": [
+        "GLEW_PREFIX=${FLATPAK_DEST}",
+        "GLEW_DEST=${FLATPAK_DEST}",
+        "LIBDIR=${FLATPAK_DEST}/lib",
+        "CFLAGS.EXTRA:=${CFLAGS} -fPIC",
+        "LDFLAGS.EXTRA=${LDFLAGS}"
+    ],
+    "make-install-args": [
+        "GLEW_PREFIX=${FLATPAK_DEST}",
+        "GLEW_DEST=${FLATPAK_DEST}",
+        "LIBDIR=${FLATPAK_DEST}/lib",
+        "CFLAGS.EXTRA:=${CFLAGS} -fPIC",
+        "LDFLAGS.EXTRA=${LDFLAGS}"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/nigels-com/glew/archive/glew-2.2.0/glew-glew-2.2.0.tar.gz",
+            "sha256": "f781d57097cdd076c6e34656d3aae239abaa03da7fd60e2249ee29df546e3d1e",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 7878,
+                "stable-only": true,
+                "url-template": "https://github.com/nigels-com/glew/archive/glew-$version/glew-glew-$version.tar.gz"
+            }
+        }
+    ],
+    "cleanup-platform": [
+        "*"
+    ]
+}

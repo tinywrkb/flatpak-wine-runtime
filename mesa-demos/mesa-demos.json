@@ -1,0 +1,26 @@
+{
+    "name": "mesa-demos",
+    "config-opts": [
+        "--disable-osmesa"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://mesa.freedesktop.org/archive/demos/mesa-demos-8.4.0.tar.bz2",
+            "sha256": "01e99c94a0184e63e796728af89bfac559795fb2a0d6f506fa900455ca5fff7d",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 16781,
+                "stable-only": true,
+                "url-template": "https://mesa.freedesktop.org/archive/demos/mesa-demos-$version.tar.bz2"
+            }
+        }
+    ],
+    "cleanup-platform": [
+        "*"
+    ],
+    "modules": [
+        "freeglut/freeglut.json",
+        "glew/glew.json"
+    ]
+}
