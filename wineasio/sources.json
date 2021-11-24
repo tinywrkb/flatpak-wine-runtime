@@ -3,7 +3,7 @@
         "type": "git",
         "url": "https://github.com/wineasio/wineasio.git",
         "branch": "master",
-        "commit": "0a97f2f9e29c133349237cdd88fec4615cc72931",
+        "commit": "4b4f68165f963a7396118817fc1a97232782e1b2",
         "x-checker-data": {
             "type": "anitya",
             "project-id": 239853,
@@ -17,7 +17,7 @@
     {
         "type": "shell",
         "commands": [
-            "sed -i '/^CC = gcc/d;/^WINECC = winegcc/d' Makefile.mk"
+            "sed -i '/^CC.*=/d;/^WINEBUILD.*=/d;/^WINECC.*=/d' Makefile.mk"
         ]
     },
     {
