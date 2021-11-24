@@ -8,9 +8,8 @@ export WINECC=winegcc
 if [ "$CC" == 'i686-unknown-linux-gnu-gcc' ]; then
   _ARCH='i386'
   _ML='32'
-  # since 4b4f68165f963a7396118817fc1a97232782e1b2 there's no need to set winebuild target
-  #export WINEBUILD+=" --target i686-unknown-linux-gnu"
-  export WINECC+=" --target i686-unknown-linux-gnu"
+  export WINEBUILDARGS="--target i686-unknown-linux-gnu"
+  export WINECCARGS="--target i686-unknown-linux-gnu"
 else
   _ARCH='x86_64'
   _ML='64'
