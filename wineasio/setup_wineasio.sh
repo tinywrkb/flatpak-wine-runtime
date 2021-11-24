@@ -4,7 +4,7 @@
 # TODO: install/uninstall
 # TODO: more WINEPREFIX testing (existence, absolute path, ...)
 
-[ -n "$WINEPREFIX" ] || { echo "WINEPREFIX must be set"; return 1; }
+[ -n "$WINEPREFIX" ] || { echo "WINEPREFIX must be set"; exit 1; }
 
 if [ "$WINEARCH" == 'win32' ]; then
   [ -e "$WINEPREFIX"/drive_c/windows/system32/wineasio.dll ] ||
@@ -25,5 +25,5 @@ elif [ "$WINEARCH" == 'win64' ]; then
   wine64 regsvr32 wineasio.dll
 else
   echo "WINEARCH must be explicitly set!"
-  return 1
+  exit 1
 fi
