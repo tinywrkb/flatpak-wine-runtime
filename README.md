@@ -44,7 +44,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 ## TODO
 
 ### packaging
-* [ ] mt32emu f-e-d-c
+* [x] mt32emu f-e-d-c **far from perfect, cannot sort versions due to the underscore**
 * [x] wine-gecko f-e-d-c or fix the check in the anitya project page
 * [ ] set no-debuginfo and strip to avoid flatpak-builder constantly attempting to compress wine libs
 * [ ] evaluate packaging a wine prefix: machids, uuids, hw identifiers

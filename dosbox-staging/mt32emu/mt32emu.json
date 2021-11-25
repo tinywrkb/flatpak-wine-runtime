@@ -12,7 +12,13 @@
         {
             "type": "archive",
             "url": "https://github.com/munt/munt/archive/libmt32emu_2_5_3.tar.gz",
-            "sha256": "062d110bbdd7253d01ef291f57e89efc3ee35fd087587458381f054bac49a8f5"
+            "sha256": "062d110bbdd7253d01ef291f57e89efc3ee35fd087587458381f054bac49a8f5",
+            "x-checker-data": {
+                "type": "html",
+                "url": "https://github.com/munt/munt/tags",
+                "version-pattern": "libmt32emu_([\\d\\.-_]+)",
+                "url-template": "https://github.com/munt/munt/archive/libmt32emu_$version.tar.gz"
+            }
         }
     ]
 }
