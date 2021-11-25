@@ -45,7 +45,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 
 ### packaging
 * [ ] mt32emu f-e-d-c
-* [ ] wine-gecko f-e-d-c or fix the check in the anitya project page
+* [x] wine-gecko f-e-d-c or fix the check in the anitya project page
 * [ ] set no-debuginfo and strip to avoid flatpak-builder constantly attempting to compress wine libs
 * [ ] evaluate packaging a wine prefix: machids, uuids, hw identifiers
 * [ ] drop cups module in favour of the runtime supplied one
