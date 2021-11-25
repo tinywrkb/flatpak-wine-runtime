@@ -179,6 +179,7 @@ modules:
   - mesa-demos/mesa-demos.json
   # helper utils
     # extract exe installers with 7z
+  - fuseiso/fuseiso.json
   - p7zip/p7zip.json
   - winetricks/winetricks.json
   - name: runtime-finalize

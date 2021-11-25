@@ -48,7 +48,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
         libs so it would be possible to run directly on the host
   * [ ] Ranger FM example
 * [ ] binfmt
-* [ ] Mounting ISOs
+* [x] Mounting ISOs **fuseiso was added. maybe also need a ui**
 
 ### Packaging
 * [x] mt32emu f-e-d-c **far from perfect, cannot sort versions due to the underscore**

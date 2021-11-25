@@ -1,0 +1,38 @@
+{
+    "name": "fuseiso",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://downloads.sourceforge.net/fuseiso/fuseiso-20070708.tar.bz2",
+            "sha256": "8b242e077d66cd20900c59c905ff90b4c934b0613dd5a20facb0b1260ac5fd88",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 229382,
+                "stable-only": true,
+                "url-template": "https://downloads.sourceforge.net/fuseiso/fuseiso-$version.tar.bz2"
+            }
+        },
+        {
+            "type": "patch",
+            "path": "00-support_large_iso.patch"
+        },
+        {
+            "type": "patch",
+            "path": "01-fix_typo.patch"
+        },
+        {
+            "type": "patch",
+            "path": "02-prevent-buffer-overflow.patch"
+        },
+        {
+            "type": "patch",
+            "path": "03-prevent-integer-overflow.patch"
+        }
+    ],
+    "modules": [
+        "fuse/fuse2.json"
+    ],
+    "cleanup": [
+        "/bin/ulockmgr_server"
+    ]
+}
