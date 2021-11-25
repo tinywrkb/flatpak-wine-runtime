@@ -43,7 +43,14 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 
 ## TODO
 
-### packaging
+* [ ] Thumbnails and preview
+  * [ ] [exe-thumbnailer](https://github.com/exe-thumbnailer/exe-thumbnailer) with staticaly linked
+        libs so it would be possible to run directly on the host
+  * [ ] Ranger FM example
+* [ ] binfmt
+* [ ] Mounting ISOs
+
+### Packaging
 * [x] mt32emu f-e-d-c **far from perfect, cannot sort versions due to the underscore**
 * [x] wine-gecko f-e-d-c or fix the check in the anitya project page
 * [ ] set no-debuginfo and strip to avoid flatpak-builder constantly attempting to compress wine libs
@@ -62,14 +69,14 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * [ ] add desktop files and mimetypes for wine programs
   * [ ] add a simple wine prefices manager. use runtime wine, so not bottles nor lutris
 
-### fonts
+### Fonts
 * [ ] fontconfig's conf.d
 * [ ] add [corefonts](http://corefonts.sourceforge.net/), [see](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web), and [gentoo's packaging](https://packages.gentoo.org/packages/media-fonts/corefonts)
 * [ ] tahoma: compare glyph coverage of wine's vs original
 * [ ] investigate font related errors, specifically Noto Fonts related
 * [ ] more fonts?
 
-### libs and tools to evaluate and add
+### Libs and tools to evaluate and add
 * [ ] dxvk-ags
 * [ ] dxvk-nvapi
 * [ ] vkd3d-proton
@@ -89,7 +96,7 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * [ ] [Winyl](https://winyl-player.github.io/)
   * [ ] [foobar2000](https://www.foobar2000.org/)
 
-### sdk environment
+### SDK environment
 * [ ] helper scripts to build wine
 * [ ] app packaging documentation and examples
 * [ ] code examples
