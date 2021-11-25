@@ -8,7 +8,7 @@
 
 if [ "$WINEARCH" == 'win32' ]; then
   [ -e "$WINEPREFIX"/drive_c/windows/system32/wineasio.dll ] ||
-    install -Dm755 -t "$WINEPREFIX"/drive_c/windows/syswow64/ \
+    install -Dm755 -t "$WINEPREFIX"/drive_c/windows/system32/ \
     /usr/lib/i386-linux-gnu/wine/i386-windows/wineasio.dll
   wine regsvr32 wineasio.dll
 
