@@ -118,13 +118,6 @@ modules:
         install -dm755 ${FLATPAK_DEST}/lib/i386-linux-gnu/{GL,dri/intel-vaapi-driver}
       # ffmpeg can be used with wine-staging
       #- install -dm755 ${FLATPAK_DEST}/lib/{x86_64,i386}-linux-gnu/ffmpeg
-      # add default 32bit locations to ld.so.conf (empty by default)
-      - |
-        install -Dm644 /dev/stdin ${FLATPAK_DEST}/etc/ld.so.conf <<EOF
-        /app/lib32
-        /app/lib/i386-linux-gnu
-        /usr/lib/i386-linux-gnu
-        EOF
   - name: install-i386-toolchain
     buildsystem: simple
     build-commands:
