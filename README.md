@@ -47,14 +47,14 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * [ ] [exe-thumbnailer](https://github.com/exe-thumbnailer/exe-thumbnailer) with staticaly linked
         libs so it would be possible to run directly on the host
   * [ ] Ranger FM example
-* [ ] binfmt
+* [x] binfmt **example with the [wine app](https://github.com/tinywrkb/org.winehq.Wine)**
 * [x] Mounting ISOs **fuseiso was added. maybe also need a ui**
 
 ### Packaging
 * [x] mt32emu f-e-d-c **far from perfect, cannot sort versions due to the underscore**
 * [x] wine-gecko f-e-d-c or fix the check in the anitya project page
 * [ ] set no-debuginfo and strip to avoid flatpak-builder constantly attempting to compress wine libs
-* [ ] evaluate packaging a wine prefix: machids, uuids, hw identifiers
+* [ ] evaluate packaging a template wine prefix in the runtime: machids, uuids, hw identifiers
 * [ ] drop cups module in favour of the runtime supplied one
 * [ ] switch master to the latest development release and add branches
   * [x] master: latest development release built on top the latest freedesktop runtime
@@ -65,9 +65,9 @@ Thus this approach can be called Flatpak-managed Wine packaging.
   * [ ] staging6 or staging6-21.08
   * [ ] lutris
   * [ ] lutris6 or lutris6-21.08
-* [ ] add a wine Flatpak app: user managed prefices and to testing and development helper
-  * [ ] add desktop files and mimetypes for wine programs
-  * [ ] add a simple wine prefices manager. use runtime wine, so not bottles nor lutris
+* [x] add a wine Flatpak app: user managed prefices and to testing and development helper **[done](https://github.com/tinywrkb/org.winehq.Wine)**
+  * [x] add desktop files and mimetypes for wine programs
+  * [ ] ~~add a simple wine prefices manager. use runtime wine, so not bottles nor lutris~~ **wontfix, use the default prefix or package the windows app as flatpak**
 
 ### Fonts
 * [ ] fontconfig's conf.d
@@ -77,9 +77,9 @@ Thus this approach can be called Flatpak-managed Wine packaging.
 * [ ] more fonts?
 
 ### Libs and tools to evaluate and add
-* [ ] dxvk-ags
-* [ ] dxvk-nvapi
-* [ ] vkd3d-proton
+* [ ] ~~dxvk-ags~~ **wontfix, gaming related**
+* [ ] ~~dxvk-nvapi~~ **wontfix, gaming related**
+* [ ] ~~vkd3d-proton~~ **wontfix, gaming related**
 * [x] WineASIO, apps to test with:
   * [ ] [Ableton Live](https://www.ableton.com/en/trial/)
   * [ ] [Amplitube](https://www.ikmultimedia.com/products/amplitube4/)
