@@ -15,6 +15,6 @@ fi
 export WINEARCH=win${_ML}
 wineprefix=${FLATPAK_BUILDER_BUILDDIR}/wine
 
-make ${_ML}
+make ${_ML} DEBUG=true
 install -Dm755 build${_ML}/wineasio.dll.so -t ${FLATPAK_DEST}/lib/${_ARCH}-linux-gnu/wine/${_ARCH}-unix/
 install -Dm755 build${_ML}/wineasio.dll -t ${FLATPAK_DEST}/lib/${_ARCH}-linux-gnu/wine/${_ARCH}-windows/
